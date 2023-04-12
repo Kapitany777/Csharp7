@@ -4,7 +4,24 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // C# 7 examples
+            Console.WriteLine("C# 7 examples");
+            Console.WriteLine("-------------");
+
+            ReadableNumericLiterals();
+        }
+
+        private static void ReadableNumericLiterals()
+        {
+            Console.WriteLine("Readable numeric literals");
+
+            int integer1 = 1_000_000;
+            Console.WriteLine(integer1);
+
+            double double1 = 1_234.5_678;
+            Console.WriteLine(double1);
+
+            Console.WriteLine();
         }
     }
 }

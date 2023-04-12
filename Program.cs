@@ -2,15 +2,6 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
-            // C# 7 examples
-            Console.WriteLine("C# 7 examples");
-            Console.WriteLine("-------------");
-
-            ReadableNumericLiterals();
-        }
-
         private static void ReadableNumericLiterals()
         {
             Console.WriteLine("Readable numeric literals");
@@ -22,6 +13,25 @@
             Console.WriteLine(double1);
 
             Console.WriteLine();
+        }
+
+        private static void HexaAndBinaryLiterals()
+        {
+            int hexa = 0xff;
+            Console.WriteLine(hexa);
+
+            int bin = 0b1111_1111;
+            Console.WriteLine(bin);
+        }
+
+        static void Main(string[] args)
+        {
+            // C# 7 examples
+            Console.WriteLine("C# 7 examples");
+            Console.WriteLine("-------------");
+
+            ReadableNumericLiterals();
+            HexaAndBinaryLiterals();
         }
     }
 }

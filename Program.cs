@@ -17,6 +17,8 @@
 
         private static void HexaAndBinaryLiterals()
         {
+            Console.WriteLine("Hexadecimal and binary literals");
+            
             int hexa = 0xff;
             Console.WriteLine(hexa);
 

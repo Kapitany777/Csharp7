@@ -15,14 +15,27 @@
             Console.WriteLine();
         }
 
-        private static void HexaAndBinaryLiterals()
+        private static void HexaAndBinaryLiterals70()
         {
-            Console.WriteLine("Hexadecimal and binary literals");
+            Console.WriteLine("Hexadecimal and binary literals in C# 7.0");
 
-            int hexa = 0xff;
+            int hexa = 0xff_00;
             Console.WriteLine(hexa);
 
             int bin = 0b1111_1111;
+            Console.WriteLine(bin);
+
+            Console.WriteLine();
+        }
+
+        private static void HexaAndBinaryLiterals72()
+        {
+            Console.WriteLine("Hexadecimal and binary literals in C# 7.2");
+
+            int hexa = 0x_ff_00;
+            Console.WriteLine(hexa);
+
+            int bin = 0b_1111_1111;
             Console.WriteLine(bin);
 
             Console.WriteLine();
@@ -70,9 +83,9 @@
             Console.WriteLine();
         }
 
-        static void OutVariables()
+        static void OutVariables1()
         {
-            Console.WriteLine("Out variables");
+            Console.WriteLine("Out variables 1.");
 
             // The old way
             string numStr1 = "700";
@@ -98,6 +111,32 @@
             {
                 Console.WriteLine(number3);
             }
+
+            Console.WriteLine();
+        }
+
+        private static void OutVariables2()
+        {
+            Console.WriteLine("Out variables 2.");
+
+            // The new C# 7 way
+            string numStr1 = "100";
+
+            if (int.TryParse(numStr1, out int number1))
+            {
+                Console.WriteLine("Parsing was successful"); ;
+            }
+
+            Console.WriteLine(number1);
+
+            string numStr2 = "aaa100";
+
+            if (int.TryParse(numStr2, out int number2))
+            {
+                Console.WriteLine("Parsing was successful");
+            }
+
+            Console.WriteLine(number2);
 
             Console.WriteLine();
         }
@@ -191,6 +230,8 @@
                     Console.WriteLine("Unknown class.");
                     break;
             }
+
+            Console.WriteLine();
         }
 
         static void Main(string[] args)
@@ -200,10 +241,12 @@
             Console.WriteLine("-------------");
 
             ReadableNumericLiterals();
-            HexaAndBinaryLiterals();
+            HexaAndBinaryLiterals70();
+            HexaAndBinaryLiterals72();
             LocalFunctions();
             ExpressionBodiedPerson();
-            OutVariables();
+            OutVariables1();
+            OutVariables2();
             ByReferenceLocalVariables();
             NullChecking();
             PatternMatchingWithTypes();
